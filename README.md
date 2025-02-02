@@ -77,6 +77,55 @@ window.addEventListener('DOMContentLoaded', () => {
   new Titlebar();
 });
 ```
+
+To use menu item without submenu, please use id.
+
+Note: You should use numeric for id property.
+
+```js
+const exampleMenuTemplate = [
+	{
+		label: 'zoomIn',
+		id:'1',
+		click: () => {
+			dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test 111',type:'error'}).then((res)=>{
+				
+			  },(err)=>{
+				
+			  });
+		}
+	},
+	{
+		label: 'zoomIn22',
+		id:'2',
+		click: () => {
+			dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test 2222',type:'error'}).then((res)=>{
+				
+			  },(err)=>{
+				
+			  });
+		}
+	},
+	{
+		label: 'Simple Options',
+		id:'3',
+		submenu: [
+			{
+				label: 'zoomIn',
+				id:'3-1',
+				click: () => {
+					dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test 333',type:'error'}).then((res)=>{
+						
+					  },(err)=>{
+						
+					  });
+				}
+			}
+		]
+	}
+]
+```
+
 To see the options you can include in the Title Bar constructor, such as color of elements, icons, menu position, and much more, and the methods you can use, go to the [wiki](https://github.com/AlexTorresDev/custom-electron-titlebar/wiki)
 
 ## 💰 Support
