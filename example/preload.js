@@ -5,7 +5,7 @@
  *
  * https://www.electronjs.org/docs/latest/tutorial/sandbox
  */
-const { CustomTitlebar, TitlebarColor } = require('custom-electron-titlebar')
+const { CustomTitlebar, TitlebarColor } = require('@siva7170/custom-electron-titlebar')
 const path = require('path')
 
 window.addEventListener('DOMContentLoaded', () => {

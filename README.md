@@ -41,7 +41,7 @@ The implementation is done as follows:
 
 In the main application file (main.js or .ts)
 ```js
-import { setupTitlebar, attachTitlebarToWindow } from "custom-electron-titlebar/main";
+import { setupTitlebar, attachTitlebarToWindow } from "@siva7170/custom-electron-titlebar/main";
 
 // setup the titlebar main process
 setupTitlebar();

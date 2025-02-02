@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu, nativeImage, ipcMain, nativeTheme, dialog } = require('electron')
-const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-titlebar/main')
+const { setupTitlebar, attachTitlebarToWindow } = require('@siva7170/custom-electron-titlebar/main')
 const path = require('path')
 
 // Setup the titlebar
