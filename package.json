@@ -1,6 +1,6 @@
 {
-  "name": "custom-electron-titlebar",
-  "version": "4.2.8",
+  "name": "@siva7170/custom-electron-titlebar",
+  "version": "5.0.0",
   "description": "Library for electron that allows you to configure a fully customizable title bar.",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.ts",
@@ -26,10 +26,16 @@
     "test": "jest"
   },
   "author": "AlexTorresDev <alextorressk@gmail.com>",
+  "contributors": [
+    {
+      "name": "Siva",
+      "email": "siva7170430@gmail.com"
+    }
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexTorresDev/custom-electron-titlebar.git"
+    "url": "https://github.com/siva7170/custom-electron-titlebar.git"
   },
   "keywords": [
     "typescript",
@@ -41,9 +47,9 @@
     "freebsd"
   ],
   "bugs": {
-    "url": "https://github.com/AlexTorresDev/custom-electron-titlebar/issues"
+    "url": "https://github.com/siva7170/custom-electron-titlebar/issues"
   },
-  "homepage": "https://github.com/AlexTorresDev/custom-electron-titlebar#readme",
+  "homepage": "https://github.com/siva7170/custom-electron-titlebar#readme",
   "peerDependencies": {
     "electron": ">20.0.0"
   },
