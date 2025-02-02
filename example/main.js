@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, Menu, nativeImage, ipcMain, nativeTheme } = require('electron')
+const { app, BrowserWindow, Menu, nativeImage, ipcMain, nativeTheme, dialog } = require('electron')
 const { setupTitlebar, attachTitlebarToWindow } = require('custom-electron-titlebar/main')
 const path = require('path')
 
@@ -20,15 +20,15 @@ function createWindow() {
 		}
 	})
 
-	/* const menu = Menu.buildFromTemplate(exampleMenuTemplate)
-	Menu.setApplicationMenu(menu) */
+	const menu = Menu.buildFromTemplate(exampleMenuTemplate)
+	Menu.setApplicationMenu(menu)
 
 	// and load the index.html of the app.
 	// mainWindow.loadFile('index.html')
 	mainWindow.loadURL('https://github.com')
 
 	// Open the DevTools.
-	// mainWindow.webContents.openDevTools()
+	mainWindow.webContents.openDevTools()
 
 	// Attach listeners
 	attachTitlebarToWindow(mainWindow)
@@ -72,10 +72,30 @@ app.on('window-all-closed', function () {
 
 
 // Custom menu
-const exampleMenuTemplate = [
+const exampleMenuTemplate1 = [
+	{
+		label: 'zoomIn',
+		click: () => {
+			dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test',type:'error'}).then((res)=>{
+				
+			  },(err)=>{
+				
+			  });
+		}
+	},
 	{
 		label: 'Simple O&ptions',
 		submenu: [
+			{
+				label: 'zoomIn',
+				click: () => {
+					dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test',type:'error'}).then((res)=>{
+						
+					  },(err)=>{
+						
+					  });
+				}
+			},
 			{
 				label: 'Quit',
 				click: () => app.quit()
@@ -235,6 +255,66 @@ const exampleMenuTemplate = [
 			{ role: 'zoomOut' },
 			{ role: 'resetZoom' },
 			{ role: 'toggleDevTools', icon: path.resolve('example/assets', 'terminal.png') }
+		]
+	}
+]
+
+
+
+// Custom menu
+const exampleMenuTemplate = [
+	{
+		label: 'zoomIn',
+		id:'1',
+		click: () => {
+			dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test 111',type:'error'}).then((res)=>{
+				
+			  },(err)=>{
+				
+			  });
+		}
+	},
+	{
+		label: 'zoomIn22',
+		id:'2',
+		click: () => {
+			dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test 2222',type:'error'}).then((res)=>{
+				
+			  },(err)=>{
+				
+			  });
+		}
+	},
+	{
+		label: 'Simple Options',
+		id:'3',
+		submenu: [
+			{
+				label: 'zoomIn',
+				id:'3-1',
+				click: () => {
+					dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test 333',type:'error'}).then((res)=>{
+						
+					  },(err)=>{
+						
+					  });
+				}
+			}
+		]
+	},
+	{
+		label: 'Simple Options',
+		submenu: [
+			{
+				label: 'zoomIn',
+				click: () => {
+					dialog.showMessageBox(null,{title:'Success', message:'Test it amd test test 444',type:'error'}).then((res)=>{
+						
+					  },(err)=>{
+						
+					  });
+				}
+			}
 		]
 	}
 ]
