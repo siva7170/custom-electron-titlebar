@@ -1,6 +1,6 @@
 {
   "name": "@siva7170/custom-electron-titlebar",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Library for electron that allows you to configure a fully customizable title bar.",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.ts",
